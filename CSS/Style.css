@@ -1,0 +1,43 @@
+body{ 
+    color: white;
+    font-family: "Port Lligat Sans";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px rgb(255, 254, 254); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#F9B7FF,#5d3cd6) ; 
+    border-radius: 7px;
+  }
+  
+/*portrait tablet size*/
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+/*phone size*/
+@media screen and (max-width: 480px){
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+

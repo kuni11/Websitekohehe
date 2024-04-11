@@ -1,0 +1,246 @@
+.header {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 25px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #1e174b;
+}
+.left-Section {
+  align-items: center;
+  width: 200px;
+}
+.logo {
+  width: 260px;
+  margin-right: 20px;
+  margin-left: -5px;
+}
+.right-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 25px;
+  flex-shrink: 0;
+  width: 530px;
+}
+.right-section a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  margin-right: 20px;
+  margin-left: -5px;
+  padding: 10px;
+  position: relative;
+}
+.right-section a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background-color: transparent;
+  transform: rotateX(0);
+  transition: transform 500ms ease-in-out;
+  transition: all 0.5s;
+}
+.right-section a:hover:before,
+.right-section a:focus:before {
+  transform: scaleX(1);
+  background-color: white;
+}
+.navigation {
+  display: none; 
+}
+/*nav function*/
+.right-section a {
+  position: relative; 
+}
+.right-section a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; 
+  left: 0;
+  width: 0; 
+  height: 2px; 
+  background-color: rgb(243, 243, 243); 
+  transition: width 0.5s ease; 
+}
+.right-section a:hover::after,
+.right-section a.active::after {
+  width: 100%; 
+}
+/*landscape tablet size*/
+@media screen and (min-width: 769px) and (max-width: 1026px) {
+  .header {
+    height: 70px;
+}
+.logo {
+  width: 230px;
+  margin-left: -8px;
+  flex-shrink: 0;
+}
+.right-section {
+  margin-right: 70px;
+  width: 300px;
+  flex-grow: 0;
+}
+.right-section a {
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
+  margin-left: -5px;
+  padding: 10px;
+}
+}
+
+/*portrait tablet size*/
+@media screen and (max-width: 768px){
+  .header {
+    height: 60px;
+}
+.logo {
+  width: 200px;
+  margin-left: -8px;
+  flex-shrink: 0;
+}
+.right-section {
+  margin-right: 60px;
+  width: 300px;
+  flex-grow: 0;
+}
+.right-section a {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+  margin-left: -5px;
+  padding: 10px;
+}
+}
+
+/*phone size*/
+@media screen and (max-width: 480px) {
+  .header{
+    display: none;
+  }
+  .navigation {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    padding: 2px;
+    height: 20px;
+    width: 100%;
+    z-index: 100;
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 16px;
+}
+.logo {
+  position: absolute;
+  width: 30%; 
+  height: auto;
+  margin-right: 15px;
+  margin-top: -3rem;
+  z-index: 100;
+}
+
+.toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #1e174b;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+    padding: 5px 20px;
+    font-weight: 600;
+}
+.toggle::before {
+    content: "Menu";
+    margin-right: 10px;
+}
+.toggle.active::before {
+    content: "Close";
+    margin-right: 10px;
+}
+.toggle span {
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+.toggle span::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+.toggle span::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+.toggle.active span::before {
+    transform: rotate(225deg);
+    top: 24px;
+}
+.toggle.active span::after {
+    transform: rotate(135deg);
+    bottom: 24px;
+}
+ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translatex(-250px);
+    transition-delay: calc(0.1s * var(--i))
+}
+.navigation.active ul li {
+    visibility: visible;
+    opacity: 1;
+    transform: translatex(0px)
+}
+ul li a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    background: #1e174b;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+    
+}
+ul li a:hover {
+    background: #f6f6f6;
+    color: #1e147e;
+    transition: 0s;
+}
+}

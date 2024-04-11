@@ -1,0 +1,396 @@
+.home {
+  display: grid;
+  gap: 15rem;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  margin: auto;
+  padding: 15rem 0rem;
+  overflow: hidden;
+  max-width: 1440px;
+}
+.navigation {
+  display: none; 
+}
+.HomeContent {
+  padding: 1rem;
+  max-width: 700px;
+  font-size: 36px;
+  padding: 10px;
+}
+.name {
+  font-size: 70px;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+.description {
+  text-justify: distribute;
+  text-align: justify;
+}
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 15px;
+}
+.icon-container:hover img:hover {
+  filter: invert(100%);
+}
+.icon-container img {
+  height: 69px;
+  width: 69px;
+}
+.picture-container img {
+  max-width: 600px;
+  margin-inline: auto;
+}
+.picture-container {
+  grid-area: 1/2/2/3;
+}
+
+.MyWorks {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  margin-top: 25px;
+  border: 5px solid white;
+  background: none;
+  border-radius: 20px;
+  padding: 5px 1px;
+  height: 57px;
+  width: 223px;
+}
+.MyWorksLink {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit text color from parent */
+
+}
+.MyWorks:hover {
+  background-color: white;
+  color: black;
+}
+
+.MyWorks p {
+  font-size: 24px;
+  font-family: "Poppins";
+  text-align: right;
+  margin-left: 20px;
+ 
+}
+.MyWorks img {
+  justify-self: start;
+  margin-top: -7px;
+}
+
+.MyWorks img:hover {
+  filter: invert(100%);
+}
+/*nav function*/
+.right-section a {
+  position: relative; 
+}
+.right-section a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; 
+  left: 0;
+  width: 0; 
+  height: 2px; 
+  background-color: rgb(243, 243, 243); 
+  transition: width 0.5s ease; 
+}
+.right-section a:hover::after,
+.right-section a.active::after {
+  width: 100%; 
+}
+/*landscape tablet size*/
+@media screen and (min-width: 769px) and (max-width: 1026px) {
+  .home {
+    gap: 1rem;
+    padding: 13rem 0rem;
+    max-width: 1026px;
+  }
+  .HomeContent {
+    font-size: 24px;
+    padding: 3rem;
+  }
+  .name {
+    font-size: 45px;
+  }
+  .icon-container {
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .icon-container img {
+    height: 49px;
+    width: 49px;
+  }
+  .picture-container img {
+    max-width: 400px;
+    margin-inline: 3rem;
+  }
+  .MyWorks {
+    gap: 5px;
+    margin-top: 20px;
+    border: 3px solid white;
+    background: none;
+    border-radius: 20px;
+    padding: 5px 1px;
+    width: 200px;
+  }
+  .MyWorks p {
+    font-size: 20px;
+    padding-top: 3px;
+  }
+  .MyWorks img {
+    width: 40px;
+    width: 40px;
+    margin-top: -2px;
+  }
+}
+/*portrait tablet size*/
+@media screen and (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 10rem 0rem;
+    max-width: 768px;
+  }
+  .HomeContent {
+    font-size: 25px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .name {
+    font-size: 50px;
+    text-align: center; 
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 50px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .icon-container img {
+    height: 59px;
+    width: 59px;
+  }
+  .picture-container img {
+    max-width: 450px;
+    margin-inline: 3rem;
+    width: 100%;
+  }
+  .MyWorks {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 20px;
+    margin-left: 4rem;
+    border: 3px solid white;
+    background: none;
+    border-radius: 20px;
+    padding: 5px 1px;
+    width: 80%; 
+    justify-content: center;
+  }
+  .MyWorks p {
+    font-size: 20px;
+    padding-top: 3px;
+  }
+  .MyWorks img {
+    width: 40px;
+    height: 40px;
+    margin-top: -2px;
+  }
+}
+/*phone size*/
+@media screen and (max-width: 480px) {
+  .header{
+    display: none;
+  }
+  .navigation {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    padding: 2px;
+    height: 20px;
+    width: 100%;
+    z-index: 100;
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 16px;
+}
+.logo {
+  position: absolute;
+  width: 30%; 
+  height: auto;
+  margin-right: 15px;
+  margin-top: -3rem;
+  z-index: 100;
+}
+
+.toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #1e174b;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #ffffff;
+    padding: 5px 20px;
+}
+.toggle::before {
+    content: "Menu";
+    margin-right: 10px;
+}
+
+.toggle.active::before {
+    content: "Close";
+    margin-right: 10px;
+}
+
+.toggle span {
+    position: relative;
+    width: 20px;
+    height: 50px;
+}
+
+.toggle span::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.toggle span::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.toggle.active span::before {
+    transform: rotate(225deg);
+    top: 24px;
+}
+
+.toggle.active span::after {
+    transform: rotate(135deg);
+    bottom: 24px;
+}
+
+ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translatex(-250px);
+    transition-delay: calc(0.1s * var(--i))
+}
+
+.navigation.active ul li {
+    visibility: visible;
+    opacity: 1;
+    transform: translatex(0px)
+}
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    height: 50px;
+    background: #1e174b;
+    color: #fff;
+    transition: 0.5s;
+    
+}
+
+ul li a:hover {
+    background: #f6f6f6;
+    color: #1e147e;
+    transition: 0s;
+}
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 10rem 0rem;
+    max-width: 480px;
+  }
+  .HomeContent {
+    font-size: 16px;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .name {
+    font-size: 40px;
+    text-align: center; 
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 50px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .icon-container img {
+    height: 39px;
+    width: 39px;
+  }
+  .picture-container img {
+    max-width: 300px;
+    margin-inline: 3rem;
+    width: 100%;
+  }
+  .MyWorks {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: -1px;
+    margin-top: 20px;
+    border: 3px solid white;
+    background: none;
+    border-radius: 20px;
+    padding: 5px 1px;
+    width: 100%; 
+    justify-content: center;
+  }
+  .MyWorks p {
+    font-size: 16px;
+    padding-top: 8px;
+  }
+  .MyWorks img {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+  }
+}
+
+
+
+  

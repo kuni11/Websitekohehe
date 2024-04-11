@@ -1,0 +1,388 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding: 0 20px; 
+    text-align: center; 
+}
+.contact p {
+    display: inline-block;
+    font-size: 50px;
+    font-family: "Poppins";
+    font-weight: 600;
+    border: 3px solid white;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    max-width: 100%; 
+}
+
+.contact p span {
+    display: inline-block;
+    text-align: center;
+    line-height: 90px;
+    width: 100%;
+}
+.Info1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    padding: 10px;
+}
+.Info1 span {
+    text-align: center;
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 0 30px;
+}
+.Phone, .Address, .Email {
+    flex: 1 0 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px; 
+    max-width: 300px;
+}
+.Email{
+    padding-left: 5rem;
+}
+.Phone img, .Address img, .Email img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.title{
+    font-size: 32px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.info {
+    font-size: 24px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 100;
+}
+.contact-container{
+ height: 100vh;
+ display:flex;
+ align-items: center;
+ justify-content: space-evenly;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contact-left-title p{
+    font-size: 36px;
+    font-family: "Poppins";
+    font-weight: 200;
+    text-align: center; 
+    line-height: 1.2;
+}
+.contact-inputs{
+    width: 1114px;
+    height: 76px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    border-radius: 20px;
+    color: #000000;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 500;
+    transition: border 0.2s ease;
+}
+.contact-left textarea{
+    height: 285px;
+    padding-top: 15px;
+    font-family: "Poppins";
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 5px solid #4b0c78;
+}
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(270deg,#bfb8ce,#1c1464);
+    cursor: pointer;
+    margin-left: auto;
+    border:1px solid #fff;
+}
+.contact-left button:hover{
+    opacity: .5;
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 15px;
+    margin-bottom: 10vh;/*to be deleted*/
+  }
+  .icon-container:hover img:hover {
+    filter: invert(100%);
+  }
+  .icon-container img {
+    height: 64px;
+    width: 64px;
+  }
+  .title-container {
+    text-align: center;
+    margin-top: 15px;
+}
+.title-icon {
+    font-size: 36px;
+    font-weight: 200;
+    margin-bottom: 30px; 
+}
+/*nav function*/
+.right-section a {
+    position: relative; 
+}
+.right-section a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color: rgb(243, 243, 243); 
+    transition: width 0.5s ease; 
+}
+.right-section a:hover::after,
+.right-section a.active::after {
+    width: 100%; 
+}
+/*landscape tablet size*/
+@media screen and (min-width: 769px) and (max-width: 1026px){
+.contact{
+    padding: 0 10px;
+}
+.contact p{
+    width: 100%;
+    font-size: 40px;
+}
+.Info1 span {
+    font-size: 30px;
+}
+.Phone, .Address, .Email {
+    max-width: 100%;
+}
+.Email{
+    padding-left: 0;
+    margin-top: 5px;
+}
+.line2{
+    display: none;
+}
+.Phone img, .Address img, .Email img {
+    width: 40px;
+    height: 40px;
+}
+.title{
+    font-size: 28px;
+}
+.info {
+    font-size: 20px;
+}
+.contact-container{
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-left-title p{
+    font-size: 32px;
+}
+.contact-inputs {
+    width: 100%; 
+    max-width: 700px; 
+    height: 60px;
+    font-size: 15px;
+}
+.contact-left button {
+    padding: 10px 25px;
+    font-size: 18px;
+}
+.icon-container {
+    gap:30px ;
+    margin-top: 5px;
+}
+.icon-container img {
+    height: 50px;
+    width: 50px;
+  }
+  .title-container {
+    margin-top: 5px;
+}
+.title-icon {
+    font-size: 31px;
+    font-weight: 200;
+    margin-bottom: 30px; 
+}
+}
+/*portrait tablet size*/
+@media screen and (max-width: 768px) {
+    .contact{
+        padding: 0 10px;
+    }
+    .contact p{
+        width: 100%;
+        font-size: 36px;
+    }
+    .Info1 span {
+        font-size: 28px;
+    }
+    .Phone, .Address, .Email {
+        max-width: 100%;
+    }
+    .Address{
+        margin-top: 50px;
+    }
+    .Email{
+        padding-left: 0;
+        margin-top: 50px;
+    }
+    .line1, .line2{
+        display: none;
+    }
+    .Phone img, .Address img, .Email img {
+        width: 36px;
+        height: 36px; 
+    }
+    .title{
+        font-size: 25px;
+    }
+    .info {
+        font-size: 19px;
+    
+    }
+    .contact-container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact-left-title p{
+        font-size: 30px;
+    }
+    .contact-inputs {
+        width: 100%; 
+        max-width: 100%; 
+        height: 50px;
+        font-size: 13px;
+    }
+    .contact-left button {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .icon-container {
+        gap:27px ;
+        margin-top: 5px;
+    }
+    .icon-container img {
+        height: 48px;
+        width: 48px;
+      }
+      .title-container {
+        margin-top: 5px;
+    }
+    .title-icon {
+        font-size: 29px;
+        font-weight: 200;
+        margin-bottom: 30px; 
+    }
+}
+/*phone size*/
+@media screen and (max-width: 480px){
+    .contact{
+        padding: 0 10px;
+    }
+    .contact p{
+        width: 100%;
+        font-size: 36px;
+    }
+    .Info1 span {
+        font-size: 28px;
+    }
+    .Phone, .Address, .Email {
+        max-width: 100%;
+    }
+    .Address{
+        margin-top: 50px;
+    }
+    .Email{
+        padding-left: 0;
+        margin-top: 50px;
+    }
+    .line1, .line2{
+        display: none;
+    }
+    .Phone img, .Address img, .Email img {
+        width: 36px;
+        height: 36px; 
+    }
+    .title{
+        font-size: 25px;
+    }
+    .info {
+        font-size: 19px;
+    
+    }
+    .contact-container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact-left-title p{
+        font-size: 27px;
+    }
+    .contact-inputs {
+        width: 80%; 
+        max-width: 80%; 
+        height: 40px;
+        font-size: 13px;
+    }
+    .contact-left button {
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 13px;   
+        margin-right: 45px;
+    }
+    .icon-container {
+        gap:27px ;
+        margin-top: 5px;
+    }
+    .icon-container img {
+        height: 48px;
+        width: 48px;
+      }
+      .title-container {
+        margin-top: 5px;
+    }
+    .title-icon {
+        font-size: 29px;
+        font-weight: 200;
+        margin-bottom: 30px; 
+    }  
+}

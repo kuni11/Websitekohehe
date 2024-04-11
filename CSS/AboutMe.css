@@ -1,0 +1,351 @@
+.About-Me {
+  display: grid;
+  gap: 15rem;
+  padding: 10rem 5rem;
+  max-width: 1440px;
+  margin: 0 auto; 
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 1px;     
+  align-items: center;
+}
+.PictureContainer3 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 1;
+}
+.PictureContainer1 {
+  grid-column: 2 / 5.1;
+  grid-row: 1 / 2;
+  margin-left: -60px;
+  margin-top: 62px;
+}
+.PictureContainer2 {
+  grid-column: 1 / 1;
+  grid-row: 2 / 2;
+  inline-size: 13%;
+  margin-left: 230px;
+  margin-top: -40px;
+}
+.AboutDescription {
+  grid-column: 2 / 3;
+  grid-row: 2 / 5;
+  margin-left: -340px;
+  margin-top: -70px;
+  text-align: justify;
+  font-size: 37px;
+}
+.Moving {
+    margin-top: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+  }
+  .Content {
+    animation: moveLeft 30s ease infinite;
+    font-size: 25px;
+    font-family: "Secular One";
+    color: black;
+  }
+  @keyframes moveLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  /*SKILL USED CSS*/
+.SkillContents .Box-1 {
+  position: absolute;
+  align-items: center;
+  left: 50px;
+  transform: translateY(-10px);
+}
+.SkillContents img {
+  width: 1036px;
+  height: 546px;
+}
+.SkillContents {
+  position: absolute;
+  left: 400px;
+  transform: translateY(-55%);
+}
+
+.SkillContents img {
+  width: 1036px;
+  height: 546px;
+}
+
+.SkillContents .Skills {
+  text-align: center;
+  padding-top: 40rem;
+  margin-bottom: -30px;
+  position: relative;
+  font-size: 70px;
+  font-family: "Poppins";
+  font-weight: 700;
+  left: 75px;
+  transform: translateY(200px);
+}
+
+.SkillContents .Skill {
+  display: flex;
+  align-items: flex-end;
+  bottom: 100px;
+}
+
+.SkillContents .Skill .Wireframes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 143px;
+  transform: translateX(150px);
+  padding-top: 17rem;
+  transition: box-shadow 1.5s, transform 0.5s; /* Add transition for smoother hover effect */
+}
+
+.SkillContents .Skill p {
+  margin-top: 20px;
+  margin-bottom: -1rem;
+  text-align: center;
+}
+
+.SkillContents .Skill img {
+  width: 106px;
+  height: 106px;
+  align-self: flex-end;
+}
+/*SOFTWARE USED CSS*/
+
+.Contents .Box {
+  position: absolute;
+  align-items: center;
+  left: 450px;
+  transform: translateY(-55%);
+}
+.Contents img {
+  width: 1036px;
+  height: 546px;
+}
+
+.Contents .Software {
+  text-align: center;
+  padding-top: 60rem;
+  margin-bottom: -30px;
+  font-size: 70px;
+  font-family: "Poppins";
+  font-weight: 700;
+  left: 35px;
+  transform: translateY(-50px);
+}
+.SoftwareUsed {
+  display: flex;
+  align-items: flex-end;
+  bottom: 100px;
+}
+
+.SoftwareUsed > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 143px;
+  padding-top: rem;
+  transform: translateX(535px);
+}
+
+.SoftwareUsed p {
+  margin-top: 20px;
+  margin-bottom: -1rem;
+  text-align: center;
+}
+
+.SoftwareUsed img {
+  width: 106px;
+  height: 106px;
+  align-self: flex-end;
+}
+/*EDUCATION */
+.School .box {
+  position: absolute;
+  align-items: center;
+  left: 450px;
+  transform: translateY(40%);
+}
+.education-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  padding-top: 20rem;
+}
+.education-details h1 {
+  font-size: 70px;
+  font-family: "Poppins";
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.education-details p {
+  font-size: 32px;
+  font-family: "Port Lligat Slab",serif;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.School{
+  margin-bottom: 20vh;/*to be deleted*/
+}
+
+ /*nav function*/
+.right-section a {
+    position: relative; 
+  }
+  .right-section a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color: rgb(243, 243, 243); 
+    transition: width 0.5s ease; 
+  }
+  .right-section a:hover::after,
+  .right-section a.active::after {
+    width: 100%; 
+  }
+  
+/*landscape tablet size*/
+@media screen and (min-width: 769px) and (max-width: 1026px){
+  .About-Me {
+    margin-top : 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem; 
+  }
+  .PictureContainer1,
+  .AboutDescription {
+    grid-column: initial; 
+    grid-row: initial; 
+    margin: 0; 
+    max-width: 700px;
+  }
+  .PictureContainer3{
+    display: none;
+  }
+  .PictureContainer2 {
+   display: none;
+  }
+  .PictureContainer1 img{
+      max-width: 700px;
+  }
+  .AboutDescription {
+    font-size: 24px; 
+    text-align: justify;
+    max-width: 700px;
+  }
+  .Content {
+    font-size: 20px;
+  }
+
+  .SkillContents {
+    position: absolute;
+    text-align: center;
+    padding: 5rem 0; 
+  }
+  .Skills {
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+  }
+  .Box-1 img{
+    display: none;
+  }
+  .Skill {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 2rem; 
+  }
+  .Wireframes {
+    width: 150px; 
+  }
+  .Wireframes img {
+    width: 100%; 
+    height: auto; 
+  }
+}
+/*portrait tablet size*/
+@media screen and (max-width: 768px){
+  .About-Me {
+    margin-top : 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem; 
+  }
+  .PictureContainer1,
+  .AboutDescription {
+    grid-column: initial; 
+    grid-row: initial; 
+    margin: 0; 
+    max-width: 600px;
+  }
+  .PictureContainer3{
+    display: none;
+  }
+  .PictureContainer2 {
+   display: none;
+  }
+  .PictureContainer1 img{
+      max-width: 600px;
+  
+  }
+  .AboutDescription {
+    font-size: 22px; 
+    text-align: justify;
+    max-width: 600px;
+  }
+  .Content {
+    font-size: 18px;
+  }
+}
+/*phone size*/
+@media screen and (max-width: 480px){
+  .About-Me {
+    margin-top : 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem; 
+  }
+  .PictureContainer1,
+  .AboutDescription {
+    grid-column: initial; 
+    grid-row: initial; 
+    margin: 0; 
+  }
+  .PictureContainer3{
+    display: none;
+  }
+  .PictureContainer2 {
+   display: none;
+  }
+  .PictureContainer1 img{
+      max-width: 300px;
+  }
+  .AboutDescription {
+    font-size: 20px; 
+    text-align: justify;
+    max-width: 500px;
+  }
+  .Content {
+    font-size: 16px;
+  }
+}

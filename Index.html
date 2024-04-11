@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lester Mariano Portfolio</title>
+    <link rel="stylesheet" href="CSS/Header.css" />
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <link rel="stylesheet" href="CSS/LandingPage.css" />
+    <link rel="stylesheet" href="CSS/background.css" />
+    <link rel="stylesheet" href="CSS/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SCROLLREVEAL-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/JS/MyJs.js"></script>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Port+Lligat+Sans&family=Port+Lligat+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Port+Lligat+Sans&family=Port+Lligat+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body style="background-color: #050029">
+    <div class="navigation">
+      <img class="logo" src="Picture/Logo.png">
+      <div class="toggle"><span></span></div>
+      <ul>
+          <li style="--i:0;"><a href="Index.html">Home</a></li>
+          <li style="--i:1;"><a href="AboutMe.html">About</a></li>
+          <li style="--i:3;"><a href="Works.html">Works</a></li>
+          <li style="--i:5;"><a href="Contact.html">Contact</a></li>
+      </ul>
+  </div>
+    <nav class="header">
+      <div class="left-Section">
+        <img class="logo" src="Picture/Logo.png" />
+      </div>
+      <div class="right-section">
+        <a href="Index.html">HOME</a>
+        <a href="AboutMe.html">ABOUT</a>
+        <a href="Works.html">WORKS</a>
+        <a href="Contact.html">CONTACT</a>
+      </div>
+    </nav>
+    <div class="home">
+      <div class="picture-container">
+        <img src="Icon/Lesterf.png" />
+      </div>
+      <div class="HomeContent">
+        <p>Hi, my name is</p>
+        <p><span class="name">Lester Mariano</span></p>
+        <p class="description">
+          Fueling my passion for technology with a Bachelor of Science in
+          Information Technology at Pamantasan ng Lungsod ng Valenzuela. Eager
+          to contribute my knowledge and drive to a dynamic team and make a
+          positive impact through innovative solutions.
+        </p>
+        <div class="icon-container">
+         
+          <a href="https://www.facebook.com/kuniiiiiiiiiiiii/">
+            <img src="Icon/FB.png" />
+          </a>
+          <a href="mailto:lestermariano27@gmail.com">
+            <img src="Icon/Gmail.png" />
+          </a>
+          <a href="https://www.instagram.com/kunii1l/"
+            ><img src="Icon/IG.png" />
+          </a>
+          <a href="https://twitter.com/kunii1_m"><img src="Icon/X.png" /> </a>
+        </div>
+        <a href="Works.html" class="MyWorksLink">
+         <div class="MyWorks">
+         <p>MY WORKS</p>
+          <img src="Icon/Right.png" />
+        </div></a>
+      </div>
+    </div>
+    <!--JAVASCRIPT-->
+    <script>
+       //Menu animation mobile
+      let navigation = document.querySelector(".navigation")
+document.querySelector(".toggle").onclick = function () {
+  this.classList.toggle("active")
+  navigation.classList.toggle("active")
+}
+     //Animation each element
+      ScrollReveal({
+        distance: "60px",
+        duration: 2500,
+        delay: 400,
+      });
+      ScrollReveal().reveal(".name", {
+        delay: 300,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".HomeContent", {
+        delay: 200,
+        origin: "top",
+      });
+      ScrollReveal().reveal(".icon-container", {
+        delay: 300,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".MyWorks", {
+        delay: 400,
+        origin: "left",
+      });
+      ScrollReveal().reveal(".picture-container", {
+        delay: 400,
+        origin: "top",
+      });
+
+      //nav bar active function
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".right-section a");
+
+    links.forEach(function(link) {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+        }
+    });
+}); 
+    </script>
+    <footer>
+      <div class="border">
+      <div class="logo-f"><img src="Picture/Logo.png" /></div>
+      <div class="footer-content">
+        <div class="info-f">
+          <p>lestermariano27@gmail.com</p>
+          <p>Phone +63 9154176906</p>
+          <p>098 Tiwala st. Dalandandan Valenzuela City</p> 
+    </div>
+      <div class="Map"><div class="map"><p><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.9980512219336!2d120.94882227566447!3d14.712702185787036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b39a3d96025b%3A0x60f8b48f9f11e666!2s463%20Tiwala%2C%20Valenzuela%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1712831711610!5m2!1sen!2sph"
+          width="660  "
+          height="135"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe></div>
+      </p>
+      <div class="footer-nav">
+        <a href="Index.html">HOME</a>
+        <a href="AboutMe.html">ABOUT</a>
+        <a href="Works.html">WORKS</a>
+        <a href="Contact.html">CONTACT</a>
+      </div>
+    </div>
+  </div>
+  <div class="uline"><img src="Icon/linefooter.png"></div>
+  
+  <div class="icon-container-footer">
+    <a href="https://www.facebook.com/kuniiiiiiiiiiiii/">
+      <img src="Icon/FB.png" />
+    </a>
+    <a href="mailto:lestermariano27@gmail.com">
+      <img src="Icon/Gmail.png" />
+    </a>
+    <a href="https://www.instagram.com/kunii1l/"
+      ><img src="Icon/IG.png" />
+    </a>
+    <a href="https://twitter.com/kunii1_m"><img src="Icon/X.png" /> </a>
+  </div>
+    <div class="Copyright"><p>© Copyright 2024 by Lester Mariano.</p></div>
+  </div>
+  </footer>
+    <!--BACKGROUND-->
+    <div class="absolute">
+      <div class="absolute inset-0 justify-center">
+        <div class="bg-shape1 bg-pink1 opacity-50 bg-blur"></div>
+        <div class="bg-shape2 bg-pink2 opacity-50 bg-blur"></div>
+        <div class="bg-shape3 bg-purple opacity-50 bg-blur"></div>
+        <div class="bg-shape4 bg-purple opacity-50 bg-blur"></div>
+      </div>
+    </div>
+  </body>
+</html>
